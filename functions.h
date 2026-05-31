@@ -7,10 +7,14 @@
 #include <sstream>
 #include <vector>
 #include <iomanip>
+#include <set>
 
-std::string tvarkingasZodis(std::string zodis);
-void skaitymas(std::string failoPav, std::map<std::string, std::vector<int>>& zodziai);
-void zodziuKiekioIsvedmas(const std::map<std::string, std::vector<int>>& zodziai, std::string Countoutput);
-void crossReferenceIsvedmas(const std::map<std::string, std::vector<int>>& zodziai, std::string CrossRefoutput);
+std::string tvarkytiZodi(std::string zodis);
+void skaitymas(std::string failoPav, std::map<std::string, std::set<int>>& zodziai, std::set<std::string>& pabaigos, std::set<std::string>& url);
+void zodziuKiekioIsvedimas(const std::map<std::string, std::set<int>>& zodziai, std::string CountOutput);
+void crossReferenceIsvedimas(const std::map<std::string, std::set<int>>& zodziai, std::string CrossRefOutput);
+void nuskaitytiTLD(std::set<std::string>& pabaigos, const std::string& failoPav);
+void rastiURL(const std::string& eilute, const std::set<std::string>& pabaigos, std::set<std::string>& url);
+void isvetiURL(std::string failoPav, const std::set<std::string>& url);
 
 #endif
