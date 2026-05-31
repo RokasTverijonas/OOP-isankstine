@@ -18,10 +18,11 @@ Programa nuskaito tekstinį failą ir skaičiuoja kiek kartų žodžiai paskarto
    ```
    git clone https://github.com/RokasTverijonas/OOP-isankstine.git
    ```
+2. Į failą "tekstas.txt" įklijuokite savo tekstą
 
-2. Įsidiekite CMake
+3. Įsidiekite CMake
 
-3. Projekto kompiliavimas su CMake
+4. Projekto kompiliavimas su CMake
    
    ```
    cd OOP-isankstine
@@ -30,14 +31,14 @@ Programa nuskaito tekstinį failą ir skaičiuoja kiek kartų žodžiai paskarto
    cmake ..
    cmake --build .
    ```
-4. Paleiskite programą
+5. Paleiskite programą
    
    ```
    cd build/debug
    ./programa
 
    ```
-5. Raskite rezultatų failus build/debug direktorijoje
+6. Raskite rezultatų failus build/debug direktorijoje
 
 ## Reikalavimai
 
