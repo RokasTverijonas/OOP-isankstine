@@ -2,7 +2,7 @@
 
 ## Aprašymas
 
-Programa nuskaito tekstinį failą ir skaičiuoja kiek kartų žodžiai paskartoja tekste.
+Programa nuskaito tekstinį failą ir skaičiuoja kiek kartų žodžiai pasikartoja tekste.
 
 ## Funkcionalumas
 
@@ -36,7 +36,6 @@ Programa nuskaito tekstinį failą ir skaičiuoja kiek kartų žodžiai paskarto
    ```
    cd build/debug
    ./programa
-
    ```
 6. Raskite rezultatų failus build/debug direktorijoje
 
