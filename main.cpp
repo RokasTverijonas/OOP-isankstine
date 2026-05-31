@@ -8,10 +8,10 @@ int main() {
     std::map<std::string, std::set<int>> zodeliai;
     std::set<std::string> url;
     std::set<std::string> pabaigos;
-    
+
     nuskaitytiTLD(pabaigos, "endings.txt");
     skaitymas("tekstas.txt", zodeliai, pabaigos, url);
-    zodziuKiekioIsvedimas(zodeliai,"isvedimas1.txt");
+    zodziuKiekioIsvedimas(zodeliai,"countOutput.txt");
     crossReferenceIsvedimas(zodeliai, "CrossReferenceOutput.txt");
-    isvetiURL("urlIsvedimas.txt", url);
+    isvetiURL("urlOutput.txt", url);
 }
