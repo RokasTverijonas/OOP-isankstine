@@ -15,7 +15,7 @@ std::string tvarkytiZodi(std::string zodis)
     return tinkamas;
 }
 
-void skaitymas(std::string failoPav, std::map<std::string, std::set<int>>& zodziai, std::set<std::string>& pabaigos, std::set<std::string>& url)
+void skaitymas(std::string failoPav, std::map<std::string, std::set<int>>& zodziai, std::set<std::string>& pabaigos, std::set<std::string>& url, std::set<std::string>& unikalus)
 {
     std::ifstream input(failoPav);
 
@@ -41,6 +41,10 @@ void skaitymas(std::string failoPav, std::map<std::string, std::set<int>>& zodzi
                 if(!std::isdigit((unsigned char)z)) { skaicius = false; break; }
             }
             if(skaicius) { continue; }
+            if(Unikalus(zodis))
+            {
+                unikalus.insert(zodis);
+            }
             zodziai[zodis].insert(eilutesNr);
         } 
     }
@@ -124,6 +128,26 @@ void isvetiURL(std::string failoPav, const std::set<std::string>& url)
     std::ofstream output(failoPav);
     output << "url'ai rasti tekste: \n";
     for(const std::string& u : url)
+    {
+        output << u << "\n";
+    }
+}
+
+bool Unikalus(const std::string& zodis)
+{
+    if(zodis.find("ltu") != std::string::npos)
+    {
+        return true;
+    }
+    return false;
+}
+
+void unikaliuIsvedimas(const std::string& failoPav, std::set<std::string>& unikalus)
+{
+    std::ofstream output(failoPav);
+    output << "Unikalūs žodiai su substring 'ltu': ";
+
+    for(const std::string& u : unikalus)
     {
         output << u << "\n";
     }
